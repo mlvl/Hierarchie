@@ -7,7 +7,6 @@ define([
 	'angularRoute',
   'directives/sunburst',
   'directives/sunburst-perspective',
-  'directives/partition',
   'directives/breadcrumb'
 	], function (angular, filters, services, directives, controllers) {
 		'use strict';

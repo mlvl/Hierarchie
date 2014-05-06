@@ -37,7 +37,7 @@ define(['angular', 'services'], function(angular, services) {
               // Renders the sunburst with current dataset
               function render(root) {
                 // Dimensions of sunburst.
-                var margin = 200;
+                var margin = 100;
                 var width = d3.select("#viz_panel")[0][0].clientWidth;
                 var height = angular.element(window)[0].innerHeight - margin;
                 var radius = Math.min(width, height) / 2;
@@ -85,7 +85,7 @@ define(['angular', 'services'], function(angular, services) {
                   .attr("height", radius)
                   .attr("transform", function(d) {
                     // some magic numbers to avoid absolute positioning the center text div
-                    return "translate(" + -radius / 7 + "," + -radius / 3.5 + ")";
+                    return "translate(" + -radius / 6 + "," + -radius / 2.25 + ")";
                   })
                   .append("xhtml:div")
                   .attr("id", "words");

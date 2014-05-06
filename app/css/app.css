@@ -1,5 +1,5 @@
 body {
-    font: 14px "CakeLato", sans-serif;
+    font: 14px "Lato", sans-serif;
     font-weight: 300;
     color: #333;
     margin: 0px; padding: 0px;
@@ -122,4 +122,18 @@ a[href^="http"] {
 #perspective-sunburst {
     margin-top: 12%;
     margin-left: 12%;
+}
+
+.word.single {
+    text-transform: uppercase;
+    font-weight:bold;
+    font-size: .9em;
+}
+
+.w0, .w1 {
+    text-transform:uppercase;
+}
+
+.w0, .w1, .w2, .w3 {
+    font-weight:bold;
 }

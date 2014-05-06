@@ -1,0 +1,12 @@
+{
+  "name": "hierarchie",
+  "dependencies": {
+    "angular": "1.2.x",
+    "angular-route": "1.2.x",
+    "d3":"latest",
+    "underscore":"latest",
+    "requirejs":"latest",
+    "requirejs-text":"latest",
+    "requirejs-domready":"latest"
+  }
+}

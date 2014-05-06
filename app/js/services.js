@@ -21,7 +21,7 @@ define(['angular'], function(angular) {
     .service('d3Service', function() {
       this.getD3 = function(callback) {
         require(["d3"], function(d3) {
-          window.d3 = d3; // for debugging because it's annoying not having d3 in the console
+          //window.d3 = d3; // for debugging because it's annoying not having d3 in the console
           callback(d3)
         });
       };
