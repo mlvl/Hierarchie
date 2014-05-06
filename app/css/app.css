@@ -31,7 +31,7 @@ a[href^="http"] {
 
 #product_title {
     font-family: 'Josefin Slab',Helvetica, Arial, sans-serif;
-    font-size: 4em;
+    font-size: 3.5em;
     font-variant: small-caps;
     text-transform: uppercase;
     font-weight: 200;
@@ -119,6 +119,11 @@ a[href^="http"] {
     width:400px;
 }
 
+#help_panel {
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+}
 #perspective-sunburst {
     margin-top: 12%;
     margin-left: 12%;
