@@ -1,0 +1,28 @@
+{
+	"name": "DAC-angular-requirejs-seed",
+	"version": "0.0.1",
+	"description": "DAC custom AngularJS seed project modified for requireJS support.",
+        "private": true,
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+                "start": "echo \"Use Python simple server\" && exit 1",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Decisive Analytics Corp. [dac.us]",
+	"readmeFilename": "README.md",
+        "dependencies": {
+            "requirejs": "2.1.11",
+            "underscore": "1.6.0",
+            "d3": "3.4.3",
+            "jquery": "2.1.0"
+        },
+	"devDependencies": {
+            "phantomjs" : "~1.9",
+            "karma" : "~0.10",
+            "karma-junit-reporter" : "~0.1",
+            "karma-jasmine" : "~0.1",
+            "protractor" : "~0.19.0"
+	}
+}

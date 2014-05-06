@@ -1,0 +1,97 @@
+/* 
+    Created on : Mar 13, 2014, 10:43:08 AM
+    Author     : meredith.myers
+*/
+
+pre {
+  font-size: 18px;
+}
+
+line {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.string, .regexp {
+  color: #f39;
+}
+
+.keyword {
+  color: #00c;
+}
+
+.comment {
+  color: #777;
+  font-style: oblique;
+}
+
+.number {
+  color: #369;
+}
+
+.class, .special {
+  color: #1181B8;
+}
+
+.chart {
+  display: block;
+  margin: auto;
+  margin-top: 1%;
+  font-size: 11px;
+}
+
+rect {
+  stroke: #eee;
+  fill-opacity: .8;
+}
+
+rect.parent {
+  cursor: pointer;
+}
+
+text {
+  pointer-events: none;
+}
+
+.partition.word {
+    margin:1px;
+    font-size: .6em;
+}
+
+.word.single {
+    text-transform: uppercase;
+    font-weight:bold;
+    font-size: .9em;
+}
+
+.w0, .w1 {
+    text-transform:uppercase;
+}
+
+.w0, .w1, .w2, .w3 {
+    font-weight:bold;
+}
+
+.partition.w0 {
+    font-size: 1.3em;
+}
+
+.partition.w1 {
+    font-size: 1.1em;
+}
+
+.partition.w2 {
+    font-size: .9em;
+}
+
+.partition.w3 {
+    font-size: .8em;
+}
+
+.partition.w4 {
+    font-size: .7em;
+}
+
+.partition.w5 {
+    font-size: .6em;
+}

@@ -1,0 +1,13 @@
+/* 
+    Created on : Mar 14, 2014, 12:58:15 PM
+    Author     : meredith.myers
+*/
+
+#sequence {
+    margin-top: 1%;
+}
+#sequence text, #legend text {
+  font-weight: 600;
+  fill: #222;
+}
+

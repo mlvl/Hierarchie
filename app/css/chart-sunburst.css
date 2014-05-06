@@ -1,0 +1,37 @@
+/* 
+    Created on : Mar 13, 2014, 3:33:50 PM
+    Author     : meredith.myers
+*/
+
+
+#chart {
+  position: relative;
+}
+
+.sunburst.word {
+    font-size: 1.3em;
+}
+
+.sunburst.w0 {
+    font-size: 3em;
+}
+
+.sunburst.w1 {
+    font-size: 2.5em;
+}
+
+.sunburst.w2 {
+    font-size: 2em;
+}
+
+.sunburst.w3 {
+    font-size: 1.6em;
+}
+
+.sunburst.w4 {
+    font-size: 1.4em;
+}
+
+.sunburst.w5 {
+    font-size: 1.3em;
+}

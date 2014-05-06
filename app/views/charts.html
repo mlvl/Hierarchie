@@ -1,0 +1,23 @@
+<div class="header">
+    <span id="product_title"><span class="dark">hiérarchie</span></span>
+</div>
+<div class="clear"></div>
+<div id="main_panel">
+<!-- comment this in to switch between the sunburst and partition views    
+    <div class="cl-effect-1 panel_name">
+        <span id="sunburst_layout" class="option selected" ng-click="display('sunburst')">sunburst</span>
+        <span id="partition_layout" class="option" ng-click="display('part')">partition</span>
+    </div>-->
+    <span id="viz_panel">
+        <div id="sunburst" sunburst data="data" ng-hide="displayVis"></div>
+        <div id="partition" partition-chart data="data" ng-show="displayVis"></div>
+    </span>
+    <span id="perspective_panel">
+        <div id="sequence" breadcrumb ></div>
+        <div id="perspective-sunburst" sunburstperspective data="data" ng-hide="displayVis"></div>
+    </span>
+    <span id="source_panel" style="display:none;">
+        <div id="source_name" class="panel_sub_name"></div>
+        <div id="document_source"></div>
+    </span>
+</div>

@@ -1,0 +1,125 @@
+body {
+    font: 14px "CakeLato", sans-serif;
+    font-weight: 300;
+    color: #333;
+    margin: 0px; padding: 0px;
+    //background: #F8F8F8;
+    background-image: url(../img/brushed.png);
+}
+a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #666;
+}
+
+a[href^="http"] {
+    padding-right: 14px;
+    background-image: url('../images/external.png');
+    background-position: right !important;
+    background-repeat: no-repeat;
+}
+
+/*header*/
+.header {
+    margin-top:10px;
+    text-align: center;
+}
+
+#product_title {
+    font-family: 'Josefin Slab',Helvetica, Arial, sans-serif;
+    font-size: 4em;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    font-weight: 200;
+    color: #33a02c;
+}
+.dark {
+    font-weight: 800;
+}
+
+/* Main Viz */
+.panel_name {
+    padding:5px;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    color: #21661C;
+    -moz-box-shadow: inset 0 0 5px #888;
+    box-shadow: inner 0 0 5px #888;
+    text-align: center;
+    font-weight: 300;
+}
+
+.panel_sub_name {
+    padding:5px;
+    margin:5px;
+    text-transform:uppercase;
+    font-family: 'Josefin Slab',Helvetica, Arial, sans-serif;
+    text-align:center;
+    border-bottom:1px solid #AE209D;
+    color:#AE209D;
+}
+
+.panel_name span {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.option.selected {
+    font-weight:bold;
+}
+
+.option:hover {
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.viz_button {
+    float:right;
+    text-align:center;
+    margin-right:10px;
+    font-family: 'Josefin Slab',Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: .9em;
+    font-weight: 600;
+    color: #333;
+    text-shadow:1px 1px 0px #EEE;
+}
+
+.viz_button:hover {
+    cursor:pointer;
+    color: #0aceff;
+}
+
+#main_panel {
+    margin-top:5px;
+    position: relative;
+}
+
+#viz_panel {
+    float:left;
+    width: 44%;
+    margin-left: 17%;
+}
+
+#perspective_panel {
+    float: left;
+    width: 38%;
+    margin-top: 5%;
+    position: absolute;
+    top: 0;
+    right: 5%;
+}
+
+#source_panel {
+    float:right;
+    width:400px;
+}
+
+#perspective-sunburst {
+    margin-top: 12%;
+    margin-left: 12%;
+}
