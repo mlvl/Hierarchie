@@ -1,10 +1,10 @@
 require.config({
 	paths: {
-		angular: '/bower_components/angular/angular',
-		angularRoute: '/bower_components/angular-route/angular-route',
-		text: '/bower_components/requirejs-text/text',
-    underscore: '/bower_components/underscore/underscore',
-		d3: '/bower_components/d3/d3.min'
+		angular: '../../bower_components/angular/angular',
+		angularRoute: '../../bower_components/angular-route/angular-route',
+		text: '../../bower_components/requirejs-text/text',
+    underscore: '../../bower_components/underscore/underscore',
+		d3: '../../bower_components/d3/d3.min'
 	},
   /* Ability to shim D3 was removed in v3.4.0. We must manually require it for use. 
    * https://github.com/mbostock/d3/issues/1693 */
