@@ -14,7 +14,9 @@
     </span>
     <span id="perspective_panel">
         <div id="sequence" breadcrumb ></div>
-        <div id="perspective-sunburst" sunburstperspective data="data" ng-hide="displayVis"></div>
+        <span id="perspective-sunburst-wrapper">
+            <div id="perspective-sunburst" sunburstperspective data="data" ng-hide="displayVis"></div>
+        </span>
     </span>
     <span id="source_panel" style="display:none;">
         <div id="source_name" class="panel_sub_name"></div>

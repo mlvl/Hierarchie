@@ -7,31 +7,59 @@
 #chart {
   position: relative;
 }
-
 .sunburst.word {
-    font-size: 1.3em;
+    font-size: .9em;
 }
 
 .sunburst.w0 {
-    font-size: 3em;
+    font-size: 1.7em;
 }
 
 .sunburst.w1 {
-    font-size: 2.5em;
+    font-size: 1.5em;
 }
 
 .sunburst.w2 {
-    font-size: 2em;
+    font-size: 1.3em;
 }
 
 .sunburst.w3 {
-    font-size: 1.6em;
+    font-size: 1.2em;
 }
 
 .sunburst.w4 {
-    font-size: 1.4em;
+    font-size: 1.1em;
 }
 
 .sunburst.w5 {
-    font-size: 1.3em;
+    font-size: 1em;
+}
+@media (min-width: 990px) {
+    .sunburst.word {
+        font-size: .9em;
+    }
+
+    .sunburst.w0 {
+        font-size: 2em;
+    }
+
+    .sunburst.w1 {
+        font-size: 1.8em;
+    }
+
+    .sunburst.w2 {
+        font-size: 1.6em;
+    }
+
+    .sunburst.w3 {
+        font-size: 1.4em;
+    }
+
+    .sunburst.w4 {
+        font-size: 1.2em;
+    }
+
+    .sunburst.w5 {
+        font-size: 1em;
+    }
 }

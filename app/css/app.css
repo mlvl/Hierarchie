@@ -28,20 +28,18 @@ a[href^="http"] {
     margin-top:10px;
     text-align: center;
 }
-
-@media (min-width: 990px) {
-    body {
-        background: red;
-    }
-
-}
 #product_title {
     font-family: 'Josefin Slab',Helvetica, Arial, sans-serif;
-    font-size: 3.5em;
+    font-size: 2em;
     font-variant: small-caps;
     text-transform: uppercase;
     font-weight: 200;
     color: #33a02c;
+}
+@media (min-width: 990px) {
+    #product_title{
+        font-size: 3.5em;
+    }
 }
 .dark {
     font-weight: 800;
@@ -106,20 +104,47 @@ a[href^="http"] {
 }
 
 #viz_panel {
-    float:left;
-    width: 44%;
-    margin-left: 17%;
+    width: 90%;
+    float: left;
+    margin-top: 15%;
+    margin-left: 5%;
+}
+
+@media (min-width: 990px) {
+    #viz_panel {
+        margin-top: 0;
+        width: 44%;
+        margin-left: 17%;
+    }
 }
 
 #perspective_panel {
-    float: left;
-    width: 38%;
-    margin-top: 5%;
+    width: 100%;
     position: absolute;
-    top: 0;
-    right: 0%;
+    top: 1%;
+    left: 1%;
 }
-
+#perspective-sunburst-wrapper {
+    width: 50%;
+    position: absolute;
+    top: 1%;
+    left: 39%;
+}
+@media (min-width: 990px) {
+    #perspective_panel {
+        float: left;
+        width: 38%;
+        margin-top: 5%;
+        position: absolute;
+        top: 0;
+        left: 60%;
+    }
+    #perspective-sunburst-wrapper {
+        width: 100%;
+        left: 0;
+        top: 20%;
+    }
+}
 #source_panel {
     float:right;
     width:400px;
@@ -130,9 +155,12 @@ a[href^="http"] {
     bottom: 1%;
     right: 1%;
 }
-#perspective-sunburst {
-    margin-top: 12%;
-    margin-left: 12%;
+
+@media (min-width: 990px) {
+    #perspective-sunburst {
+        margin-top: 12%;
+        margin-left: 12%;
+    }
 }
 
 .word.single {

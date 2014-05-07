@@ -19,14 +19,27 @@ define(['angular', 'services'], function(angular, services) {
           link: function(scope) {
             d3Service.getD3(function(d3) {
 
+              var width = d3.select("#viz_panel")[0][0].clientWidth;
+              console.log(width)
               // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
               var b = {
-                w: 100, h: 40, s: 3, t: 10
+                w: 100,
+                h: 40,
+                s: 3,
+                t: 10
               };
+              if (d3.select("body")[0][0].clientWidth < 990) {
+                b = {
+                  w: 60,
+                  h: 30,
+                  s: 3,
+                  t: 10
+                };
+              }
 
               // Add the svg area.
               d3.select("#sequence").append("svg:svg")
-                .attr("width", d3.select("#viz_panel")[0][0].clientWidth)
+                .attr("width", width)
                 .attr("height", b.h)
                 .attr("id", "trail");
 
