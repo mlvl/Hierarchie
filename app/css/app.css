@@ -152,8 +152,16 @@ a[href^="http"] {
 
 #help_panel {
     position: fixed;
-    bottom: 1%;
-    right: 1%;
+    bottom: 0;
+    right: 0;
+    font-size: .8em;
+}
+@media (min-width: 990px) {
+    #help_panel {
+        position: fixed;
+        bottom: 1%;
+        right: 1%;
+    }
 }
 
 @media (min-width: 990px) {
