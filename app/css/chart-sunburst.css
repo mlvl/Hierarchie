@@ -12,26 +12,18 @@
 }
 
 .sunburst.w0 {
-    font-size: 1.7em;
-}
-
-.sunburst.w1 {
-    font-size: 1.5em;
-}
-
-.sunburst.w2 {
     font-size: 1.3em;
 }
 
-.sunburst.w3 {
+.sunburst.w1 {
     font-size: 1.2em;
 }
 
-.sunburst.w4 {
+.sunburst.w2 {
     font-size: 1.1em;
 }
 
-.sunburst.w5 {
+.sunburst.w3, .sunburst.w4, .sunburst.w5 {
     font-size: 1em;
 }
 @media (min-width: 990px) {

@@ -20,7 +20,7 @@ define(['angular', 'services'], function(angular, services) {
             d3Service.getD3(function(d3) {
 
               var width = d3.select("#viz_panel")[0][0].clientWidth;
-              console.log(width)
+              var mobileDisplay = d3.select("body")[0][0].clientWidth < 990;
               // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
               var b = {
                 w: 100,
@@ -28,7 +28,7 @@ define(['angular', 'services'], function(angular, services) {
                 s: 3,
                 t: 10
               };
-              if (d3.select("body")[0][0].clientWidth < 990) {
+              if (mobileDisplay) {
                 b = {
                   w: 60,
                   h: 30,
@@ -89,6 +89,7 @@ define(['angular', 'services'], function(angular, services) {
                   .attr("x", (b.w + b.t) / 2)
                   .attr("y", b.h / 2)
                   .attr("dy", "0.35em")
+                  .attr("font-size", mobileDisplay? "12" : "14")
                   .attr("text-anchor", "middle")
                   .text(function(d) {
                     return d.words[0];

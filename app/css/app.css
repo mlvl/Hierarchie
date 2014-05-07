@@ -104,10 +104,10 @@ a[href^="http"] {
 }
 
 #viz_panel {
-    width: 90%;
+    width: 80%;
     float: left;
     margin-top: 15%;
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 @media (min-width: 990px) {
@@ -127,7 +127,7 @@ a[href^="http"] {
 #perspective-sunburst-wrapper {
     width: 50%;
     position: absolute;
-    top: 20%;
+    top: 50%;
     left: 2%;
 }
 @media (min-width: 990px) {
