@@ -100,7 +100,10 @@ define(['angular', 'services'], function(angular, services) {
 
                 // Show the list of words for the currently focused node
                 showWords(root);
-
+                // Show the breadcrumb root
+                var ancestors = nodeService.getAncestors(root);
+                $rootScope.$broadcast('updateBreadcrumb', root, ancestors);
+                
                 var path = vis.data([root]).selectAll("#sunburst-path")
                   .data(partition.nodes(root))
                   .enter().append("svg:path")

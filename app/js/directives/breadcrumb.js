@@ -4,8 +4,16 @@ define(['angular', 'services'], function(angular, services) {
   /* Bread crumb display directive
    * 
    * This code was modified from the example found at http://bl.ocks.org/kerryrodden/7090426
-   * which is covered by the Apache v2.0 License. A copy of this license can be found in /directives
-   * 
+   * which is covered by the Apache v2.0 License. A copy of this license is as follows:
+   *    --- BEGIN ---
+   *    Copyright 2013 Google Inc. All Rights Reserved.
+   *
+   *    Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+   *
+   *    http://www.apache.org/licenses/LICENSE-2.0
+   *
+   *    Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+   *  --- END ---
    * Developers: Do not remove this notification or license.
    */
   angular.module('recursiviz.directives')
@@ -68,7 +76,6 @@ define(['angular', 'services'], function(angular, services) {
               }
               // Update the breadcrumb trail to show the current sequence and percentage.
               function updateBreadcrumbs(nodeArray, percentageString) {
-
                 // Data join; key function combines name and depth (= position in sequence).
                 var g = d3.select("#trail")
                   .selectAll("g")

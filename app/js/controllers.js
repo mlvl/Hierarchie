@@ -42,9 +42,9 @@ define(['angular', 'services'], function (angular) {
             success(function(data, status, headers, config) {
               // Do a little minipulation of the data formatting to create a valid root
               var root = {
-                name: data.topic_data[0].name,
-                children: data.topic_data[0].children,
-                words: data.topic_data[0].words
+                name: "MH370",
+                children: data.topic_data,
+                words: ["MH370"]
               };
               $scope.assignColors(root);
               $scope.data = root;
