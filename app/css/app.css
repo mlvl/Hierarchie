@@ -29,6 +29,12 @@ a[href^="http"] {
     text-align: center;
 }
 
+@media (min-width: 990px) {
+    body {
+        background: red;
+    }
+
+}
 #product_title {
     font-family: 'Josefin Slab',Helvetica, Arial, sans-serif;
     font-size: 3.5em;
