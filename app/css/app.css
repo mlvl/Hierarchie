@@ -41,6 +41,25 @@ a:hover {
     font-weight: 800;
 }
 
+#dac_logo {
+    position: absolute;
+    bottom: 3%;
+    left: 1%;
+    z-index: 1000;
+}
+#dac_logo img {
+    width: 100px;
+}
+@media (min-width: 990px) {
+    #dac_logo {
+        position: absolute;
+        bottom: 0;
+        left: 1%;
+    }
+    #dac_logo img {
+        width: 150px;
+    }
+}
 /* Main Viz */
 .panel_name {
     font-size: 1.1em;
