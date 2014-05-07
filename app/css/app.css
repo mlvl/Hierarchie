@@ -15,15 +15,12 @@ a:hover {
     color: #666;
 }
 
-a[href^="http"] {
-    padding-right: 14px;
-    background-position: right !important;
-    background-repeat: no-repeat;
-}
-
 /*header*/
 .header {
     margin-top:10px;
+    text-align: center;
+}
+.interaction {
     text-align: center;
 }
 #product_title {
@@ -36,7 +33,7 @@ a[href^="http"] {
 }
 @media (min-width: 990px) {
     #product_title{
-        font-size: 3.5em;
+        font-size: 3em;
     }
 }
 .dark {
@@ -45,24 +42,12 @@ a[href^="http"] {
 
 /* Main Viz */
 .panel_name {
-    padding:5px;
-    text-transform: uppercase;
     font-size: 1.1em;
     color: #21661C;
     -moz-box-shadow: inset 0 0 5px #888;
     box-shadow: inner 0 0 5px #888;
     text-align: center;
     font-weight: 300;
-}
-
-.panel_sub_name {
-    padding:5px;
-    margin:5px;
-    text-transform:uppercase;
-    font-family: 'Josefin Slab',Helvetica, Arial, sans-serif;
-    text-align:center;
-    border-bottom:1px solid #AE209D;
-    color:#AE209D;
 }
 
 .panel_name span {
@@ -97,7 +82,6 @@ a[href^="http"] {
 }
 
 #main_panel {
-    margin-top:5px;
     position: relative;
 }
 
@@ -132,7 +116,7 @@ a[href^="http"] {
     #perspective_panel {
         float: left;
         width: 38%;
-        margin-top: 5%;
+        margin-top: 7%;
         position: absolute;
         top: 0;
         left: 60%;
@@ -148,14 +132,32 @@ a[href^="http"] {
     width:400px;
 }
 
-#help_panel {
+#about_link {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    text-align: center;
+}
+.questionmk {
+    font-size: 3em;
+}
+
+#links {
     position: fixed;
     bottom: 0;
     right: 0;
     font-size: .5em;
 }
+#links a, #about_link a {
+    color: #33a02c;
+}
+
+#links a:hover, #about_link a:hover {
+    color: #666;
+}
+
 @media (min-width: 990px) {
-    #help_panel {
+    #links {
         position: fixed;
         bottom: 1%;
         right: 1%;

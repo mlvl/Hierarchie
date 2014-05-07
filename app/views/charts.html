@@ -1,7 +1,9 @@
-
-    <div class="cl-effect-1 panel_name">
-        <span id="sunburst_layout" class="option selected" ng-click="about()">About</span>
-        <span id="partition_layout" class="option" ng-click="display('part')">partition</span>
+    <div class="header">
+      <span id="product_title"><span class="dark">hierarchie</span></span>
+    </div>
+    <p class="interaction">Mouseover to explore, click to zoom in, click the center to zoom out.</p>
+          <span id="about_link"><a href="#/about"><span class="questionmk">?</span><br>About</a></span>
+    <div class="panel_name">    
     </div>
     <span id="viz_panel">
         <div id="sunburst" sunburst data="data" ng-hide="displayVis"></div>
@@ -17,6 +19,6 @@
         <div id="source_name" class="panel_sub_name"></div>
         <div id="document_source"></div>
     </span>
-    <span id="help_panel">
-    <p>Mouseover to explore, click to zoom in, click the center to zoom out.</p>
+    <span id="links">
+        <span>View the source code on <a href="https://github.com/decisive-ui/Hierarchie">Github</a> and follow us on <a href="https://twitter.com/decisiveUI">Twitter</a></span>
     </span>
