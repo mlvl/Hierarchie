@@ -3,7 +3,6 @@ body {
     font-weight: 300;
     color: #333;
     margin: 0px; padding: 0px;
-    //background: #F8F8F8;
     background-image: url(../img/brushed.png);
 }
 a {
@@ -18,7 +17,6 @@ a:hover {
 
 a[href^="http"] {
     padding-right: 14px;
-    background-image: url('../images/external.png');
     background-position: right !important;
     background-repeat: no-repeat;
 }
@@ -161,6 +159,7 @@ a[href^="http"] {
         position: fixed;
         bottom: 1%;
         right: 1%;
+        font-size: 1em;
     }
 }
 

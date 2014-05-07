@@ -1,13 +1,8 @@
-<div class="header">
-    <span id="product_title"><span class="dark">hiérarchie</span></span>
-</div>
-<div class="clear"></div>
-<div id="main_panel">
-<!-- comment this in to switch between the sunburst and partition views    
+
     <div class="cl-effect-1 panel_name">
-        <span id="sunburst_layout" class="option selected" ng-click="display('sunburst')">sunburst</span>
+        <span id="sunburst_layout" class="option selected" ng-click="about()">About</span>
         <span id="partition_layout" class="option" ng-click="display('part')">partition</span>
-    </div>-->
+    </div>
     <span id="viz_panel">
         <div id="sunburst" sunburst data="data" ng-hide="displayVis"></div>
         <div id="partition" partition-chart data="data" ng-show="displayVis"></div>
@@ -25,4 +20,3 @@
     <span id="help_panel">
     <p>Mouseover to explore, click to zoom in, click the center to zoom out.</p>
     </span>
-</div>

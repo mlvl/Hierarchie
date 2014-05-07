@@ -5,8 +5,9 @@ define(['angular', 'app'], function(angular, app) {
 		$routeProvider.when('/', {
 			templateUrl: 'app/views/charts.html',
 			controller: 'MainCtrl'
-		});
-		$routeProvider.otherwise({redirectTo: '/'});
+		})
+    .when('/about', {templateUrl: 'app/views/about.html'})
+		.otherwise({redirectTo: '/'});
 	}]);
 
 });

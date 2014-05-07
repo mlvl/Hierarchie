@@ -5,7 +5,7 @@ define(['angular', 'services'], function (angular) {
 	
 	return angular.module('recursiviz.controllers', ['recursiviz.services'])
     // Main controller for application. Handles loading of data, assignment of colors, and display switching
-    .controller('MainCtrl', ['$scope', '$http', 'version', 'd3Service', function($scope, $http, version, d3Service) {
+    .controller('MainCtrl', ['$scope', '$http', 'version', 'd3Service', '$location', function($scope, $http, version, d3Service, $location) {
         $scope.scopedAppVersion = version;
         $scope.data;
         $scope.displayVis = false;
@@ -53,5 +53,8 @@ define(['angular', 'services'], function (angular) {
               console.log("Error loading data!" + status);
             });
         });
+        $scope.about = function() {
+          $location.path("/about");
+        }
       }]);
 });
