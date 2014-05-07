@@ -6,6 +6,9 @@ By exploring the visualization, it's possible to discern different topics and th
 
 This implementation of a sunburst was based upon [Sequences Sunburst](http://bl.ocks.org/kerryrodden/7090426) by Kerry Rodden and [Zoomable Sunburst](http://bl.ocks.org/mbostock/4348373) by Mike Bostock.
 
+### Interactivity
+
+Hierarchie updates on mouseover and zooms on click, so it's best viewed on a laptop or desktop. 
 
 ### License
 
