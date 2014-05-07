@@ -11,12 +11,11 @@ a {
     font-weight: bold;
     text-decoration: none;
 }
-
 a:hover {
     color: #666;
 }
 
-/*header*/
+/* Header */
 .header {
     margin-top:10px;
     text-align: center;
@@ -40,7 +39,6 @@ a:hover {
 .dark {
     font-weight: 800;
 }
-
 #dac_logo {
     position: absolute;
     bottom: 3%;
@@ -60,64 +58,25 @@ a:hover {
         width: 150px;
     }
 }
-/* Main Viz */
-.panel_name {
-    font-size: 1.1em;
-    color: #21661C;
-    -moz-box-shadow: inset 0 0 5px #888;
-    box-shadow: inner 0 0 5px #888;
-    text-align: center;
-    font-weight: 300;
-}
 
-.panel_name span {
-    margin-left: 4px;
-    margin-right: 4px;
+/* Main Vizualization */
+#chart {
+  position: relative;
 }
-
-.option.selected {
-    font-weight:bold;
-}
-
-.option:hover {
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.viz_button {
-    float:right;
-    text-align:center;
-    margin-right:10px;
-    font-family: 'Josefin Slab',Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: .9em;
-    font-weight: 600;
-    color: #333;
-    text-shadow:1px 1px 0px #EEE;
-}
-
-.viz_button:hover {
-    cursor:pointer;
-    color: #0aceff;
-}
-
 #content_wrapper {
     position: absolute;
     width: 100%;
     height: 100%;
 }
-
 #main_panel {
     position: relative;
 }
-
 #viz_panel {
     width: 80%;
     float: left;
     margin-top: 8%;
     margin-left: 10%;
 }
-
 @media (min-width: 990px) {
     #viz_panel {
         margin-top: 0;
@@ -126,6 +85,7 @@ a:hover {
     }
 }
 
+/* Perspective Visualization */
 #perspective_panel {
     width: 100%;
     position: absolute;
@@ -153,11 +113,17 @@ a:hover {
         top: 20%;
     }
 }
-#source_panel {
-    float:right;
-    width:400px;
+
+/* Breadcrumb */
+#sequence {
+    margin-top: 1%;
+}
+#sequence text, #legend text {
+  font-weight: 600;
+  fill: #222;
 }
 
+/* About links */
 #about_link {
     position: absolute;
     right: 1%;
@@ -174,8 +140,6 @@ a:hover {
         font-size: 3em;
     }   
 }
-
-
 #links {
     position: fixed;
     bottom: 0.25%;
@@ -186,11 +150,9 @@ a:hover {
 #links a, #about_link a {
     color: #33a02c;
 }
-
 #links a:hover, #about_link a:hover {
     color: #666;
 }
-
 @media (min-width: 990px) {
     #links {
         position: fixed;
@@ -199,7 +161,6 @@ a:hover {
         text-align: right;
     }
 }
-
 @media (min-width: 990px) {
     #perspective-sunburst {
         margin-top: 12%;
@@ -207,16 +168,48 @@ a:hover {
     }
 }
 
-.word.single {
-    text-transform: uppercase;
-    font-weight:bold;
-    font-size: .9em;
-}
-
+/* Word size formatting */
 .w0, .w1 {
     text-transform:uppercase;
 }
-
 .w0, .w1, .w2, .w3 {
     font-weight:bold;
+}
+.sunburst.word {
+    font-size: .7em;
+}
+.sunburst.w0 {
+    font-size: 1em;
+}
+.sunburst.w1 {
+    font-size: .9em;
+}
+.sunburst.w2 {
+    font-size: .8em;
+}
+.sunburst.w3, .sunburst.w4, .sunburst.w5 {
+    font-size: .7em;
+}
+@media (min-width: 990px) {
+    .sunburst.word {
+        font-size: .9em;
+    }
+    .sunburst.w0 {
+        font-size: 2em;
+    }
+    .sunburst.w1 {
+        font-size: 1.8em;
+    }
+    .sunburst.w2 {
+        font-size: 1.6em;
+    }
+    .sunburst.w3 {
+        font-size: 1.4em;
+    }
+    .sunburst.w4 {
+        font-size: 1.2em;
+    }
+    .sunburst.w5 {
+        font-size: 1em;
+    }
 }
