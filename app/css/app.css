@@ -127,8 +127,8 @@ a[href^="http"] {
 #perspective-sunburst-wrapper {
     width: 50%;
     position: absolute;
-    top: 1%;
-    left: 39%;
+    top: 20%;
+    left: 2%;
 }
 @media (min-width: 990px) {
     #perspective_panel {
