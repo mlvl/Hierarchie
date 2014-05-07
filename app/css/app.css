@@ -141,8 +141,8 @@ a:hover {
 
 #about_link {
     position: absolute;
-    top: 0.25%;
     right: 1%;
+    top: -0.75em;
     text-align: center;
 }
 .questionmk {
@@ -150,7 +150,6 @@ a:hover {
 }
 @media (min-width: 990px) {
     #about_link {
-        top: 1%;
     }
     .questionmk {
         font-size: 3em;
@@ -162,6 +161,8 @@ a:hover {
     position: fixed;
     bottom: 0.25%;
     right: 1%;
+    text-align: center;
+    width: 100%;
 }
 #links a, #about_link a {
     color: #33a02c;
@@ -175,7 +176,8 @@ a:hover {
     #links {
         position: fixed;
         bottom: 1%;
-        font-size: 1em;
+        font-size: .9em;
+        text-align: right;
     }
 }
 
