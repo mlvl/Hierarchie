@@ -8,23 +8,23 @@
   position: relative;
 }
 .sunburst.word {
-    font-size: .9em;
+    font-size: .7em;
 }
 
 .sunburst.w0 {
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 .sunburst.w1 {
-    font-size: 1.2em;
+    font-size: .9em;
 }
 
 .sunburst.w2 {
-    font-size: 1.1em;
+    font-size: .8em;
 }
 
 .sunburst.w3, .sunburst.w4, .sunburst.w5 {
-    font-size: 1em;
+    font-size: .7em;
 }
 @media (min-width: 990px) {
     .sunburst.word {

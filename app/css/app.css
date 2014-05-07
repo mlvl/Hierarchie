@@ -154,7 +154,7 @@ a[href^="http"] {
     position: fixed;
     bottom: 0;
     right: 0;
-    font-size: .8em;
+    font-size: .5em;
 }
 @media (min-width: 990px) {
     #help_panel {
