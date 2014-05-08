@@ -213,3 +213,20 @@ a:hover {
         font-size: 1em;
     }
 }
+
+/* About */
+.about {
+    margin: auto;
+    max-width: 1000px;
+    padding: 20px;
+    display: inherit;
+}
+
+.about > a {
+    color: #33a02c;
+}
+
+.about > .footer {
+    font-style: italic;
+    font-size: 12pt;
+}
