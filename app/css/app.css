@@ -1,10 +1,9 @@
 body {
-    font: 14px "Lato", sans-serif;
+    font: 16px "Lato", sans-serif;
     font-weight: 300;
     color: #333;
     margin: 0px; padding: 0px;
     background-image: url(../img/brushed.png);
-    overflow: hidden;
 }
 a {
     color: #000;
@@ -40,7 +39,7 @@ a:hover {
     font-weight: 800;
 }
 #dac_logo {
-    position: absolute;
+    position: fixed;
     bottom: 3%;
     left: 1%;
     z-index: 1000;
@@ -50,7 +49,6 @@ a:hover {
 }
 @media (min-width: 990px) {
     #dac_logo {
-        position: absolute;
         bottom: 0;
         left: 1%;
     }
@@ -235,4 +233,12 @@ a:hover {
     margin-top: 20px;
     font-style: italic;
     font-size: 12px;
+}
+
+.image-holder {
+    text-align: center;
+}
+
+.image-holder img {
+    width: 600px;
 }
