@@ -1,8 +1,8 @@
 #Hierarchie
 
-####A STRUCTURED DISPLAY OF TOPICS FROM DISCUSSION SURROUNDING THE MH-370 DISAPPEARANCE
+*A STRUCTURED DISPLAY OF TOPICS FROM DISCUSSION SURROUNDING THE MH-370 DISAPPEARANCE*
 
-![ScreenShot](/app/img/full.jpg)
+![ScreenShot](app/img/full.jpg)
 
 Hierarchie provides hierarchical navigation of the different topics or themes from text. These topics are discovered using a technique called Hierarchical Latent Dirichlet Allocation (HLDA), and are represented in the visualization as lists of words.
 
