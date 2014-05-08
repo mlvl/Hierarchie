@@ -87,19 +87,6 @@ define(['angular', 'services'], function(angular, services) {
                   .attr("r", radius)
                   .style("opacity", 0);
 
-                vis.append("foreignObject")
-                  .attr("class", "explanation-obj")
-                  .attr("width", radius)
-                  .attr("height", radius)
-                  .attr("transform", function(d) {
-                    // some magic numbers to avoid absolute positioning the center text div
-                    return "translate(" + -radius / 6 + "," + -radius / 2.25 + ")";
-                  })
-                  .append("xhtml:div")
-                  .attr("id", "words");
-
-                // Show the list of words for the currently focused node
-                showWords(root);
                 // Show the breadcrumb root
                 var ancestors = nodeService.getAncestors(root);
                 $rootScope.$broadcast('updateBreadcrumb', root, ancestors);
@@ -108,6 +95,7 @@ define(['angular', 'services'], function(angular, services) {
                   .data(partition.nodes(root))
                   .enter().append("svg:path")
                   .attr("id", "sunburst-path")
+                  .style("z-index", 1)
                   .attr("d", arc)
                   .attr("fill-rule", "evenodd")
                   .style("fill", function(d) {
@@ -118,6 +106,23 @@ define(['angular', 'services'], function(angular, services) {
                   })
                   .on("mouseover", mouseover)
                   .on("click", sunburst_click);
+
+                // Append text for topic words to center
+                vis.append("foreignObject")
+                  .attr("class", "explanation-obj")
+                  .attr("width", radius)
+                  .attr("height", radius+100)
+                  .style("z-index", 100)
+                  .attr("transform", function(d) {
+                    // some magic numbers to avoid absolute positioning the center text div
+                    return "translate(" + -radius / 2 + "," + -(radius-100) / 2 + ")";
+                  })
+                  .append("xhtml:div")
+                  .attr("id", "words")
+                  .style("text-align", "center");
+
+                // Show the list of words for the currently focused node
+                showWords(root);
 
                 // Add the mouseleave handler to the bounding circle.
                 d3.select("#container").on("mouseleave", mouseleave);
@@ -144,6 +149,7 @@ define(['angular', 'services'], function(angular, services) {
                   path.transition()
                     .duration(500)
                     .attrTween("d", arcTween(nNode));
+
                 }
 
                 // Interpolate the scales!
@@ -169,7 +175,7 @@ define(['angular', 'services'], function(angular, services) {
                 function showWords(d) {
                   d3.select("#words")
                     .empty();
-
+                    console.log(wordFormat.formatWords(d.words, 'sunburst'))
                   var words = wordFormat.formatWords(d.words, 'sunburst');
 
                   d3.select("#words")
@@ -177,6 +183,10 @@ define(['angular', 'services'], function(angular, services) {
 
                   d3.select("#words")
                     .style("visibility", "");
+
+                   var ctrWidth = d3.select("#words")[0][0].clientWidth;
+                   var ctrHeight = d3.select("#words")[0][0].clientHeight;
+                   console.log(ctrWidth+" "+ctrHeight);
                 }
 
                 // Fade all but the current sequence, and show it in the breadcrumb trail.
