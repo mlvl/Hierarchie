@@ -110,16 +110,18 @@ define(['angular', 'services'], function(angular, services) {
                 // Append text for topic words to center
                 vis.append("foreignObject")
                   .attr("class", "explanation-obj")
-                  .attr("width", radius)
-                  .attr("height", radius+100)
+                  .style("border-radius", "50%")
+                  .attr("width", radius-100)
+                  .attr("height", radius-100)
                   .style("z-index", 100)
                   .attr("transform", function(d) {
                     // some magic numbers to avoid absolute positioning the center text div
-                    return "translate(" + -radius / 2 + "," + -(radius-100) / 2 + ")";
+                    return "translate(" + -radius / 3 + "," + -(radius) / 3 + ")";
                   })
                   .append("xhtml:div")
                   .attr("id", "words")
-                  .style("text-align", "center");
+                  .style("text-align", "center")
+                  .on("click", center_click);
 
                 // Show the list of words for the currently focused node
                 showWords(root);
@@ -150,6 +152,28 @@ define(['angular', 'services'], function(angular, services) {
                     .duration(500)
                     .attrTween("d", arcTween(nNode));
 
+                }
+
+                function center_click() {
+                  console.log
+                  var nNode;
+                  if (currentRoot && currentRoot.parent) {
+                    currentRoot = currentRoot.parent;
+                    nNode = currentRoot;
+                  }
+                  showWords(nNode);
+
+                  var ancestors = nodeService.getAncestors(nNode);
+                  $rootScope.$broadcast('updateBreadcrumb', nNode, ancestors);
+
+                  d3.selectAll("#sunburst-path")
+                    .style("opacity", function(d) {
+                      return ancestors.indexOf(d) !== -1 || d === currentRoot ? 0.15 : 1;
+                    });
+
+                  path.transition()
+                    .duration(500)
+                    .attrTween("d", arcTween(nNode));
                 }
 
                 // Interpolate the scales!

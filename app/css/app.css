@@ -185,7 +185,7 @@ a:hover {
     font-size: .7em;
 }
 .sunburst.w0 {
-    font-size: 1em;
+    font-size: 1.1em;
 }
 .sunburst.w1 {
     font-size: .9em;
@@ -195,29 +195,6 @@ a:hover {
 }
 .sunburst.w3, .sunburst.w4, .sunburst.w5 {
     font-size: .7em;
-}
-@media (min-width: 990px) {
-    .sunburst.word {
-        font-size: .9em;
-    }
-    .sunburst.w0 {
-        font-size: 2em;
-    }
-    .sunburst.w1 {
-        font-size: 1.8em;
-    }
-    .sunburst.w2 {
-        font-size: 1.6em;
-    }
-    .sunburst.w3 {
-        font-size: 1.4em;
-    }
-    .sunburst.w4 {
-        font-size: 1.2em;
-    }
-    .sunburst.w5 {
-        font-size: 1em;
-    }
 }
 
 /* About */
