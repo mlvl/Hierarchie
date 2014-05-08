@@ -19,8 +19,16 @@ a:hover {
     margin-top:10px;
     text-align: center;
 }
+.tagline {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+}
 .interaction {
     text-align: center;
+    font-size: 11px;
+    font-style: italic;
 }
 #product_title {
     font-family: 'Josefin Slab',Helvetica, Arial, sans-serif;
