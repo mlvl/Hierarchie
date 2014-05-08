@@ -222,11 +222,17 @@ a:hover {
     display: inherit;
 }
 
+.about > .header {
+    margin-bottom: 20px;
+}
+
 .h-link {
     color: #33a02c;
 }
 
 .about > .footer {
+    text-align:center;
+    margin-top: 20px;
     font-style: italic;
-    font-size: 12pt;
+    font-size: 12px;
 }
