@@ -109,6 +109,7 @@ define(['angular', 'services'], function(angular, services) {
                     return d === currentRoot ? 0.3 : 1;
                   })
                   .on("mouseover", mouseover)
+                  .style("cursor", "pointer")
                   .on("click", sunburst_click);
 
                 // Append text for topic words to center
@@ -118,6 +119,7 @@ define(['angular', 'services'], function(angular, services) {
                   .attr("width", radius - wordMargin)
                   .attr("height", radius - wordMargin)
                   .style("z-index", 100)
+                  .style("cursor", "pointer")
                   .attr("transform", function(d) {
                     // some magic numbers to avoid absolute positioning the center text div
                     return "translate(" + -radius / 3 + "," + -(radius) / 3 + ")";
