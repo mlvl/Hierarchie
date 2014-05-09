@@ -46,6 +46,10 @@ define(['angular', 'services'], function(angular, services) {
               function render(root) {
                 // Dimensions of sunburst.
                 var margin = 140;
+                var mobileDisplay = d3.select("body")[0][0].clientWidth < 990;
+                var wordMargin = 100;
+                if (mobileDisplay)
+                  wordMargin = 50;
                 var width = d3.select("#viz_panel")[0][0].clientWidth - (margin/2);
                 var height = angular.element(window)[0].innerHeight - margin;
                 var radius = Math.min(width, height) / 2;
@@ -111,8 +115,8 @@ define(['angular', 'services'], function(angular, services) {
                 vis.append("foreignObject")
                   .attr("class", "explanation-obj")
                   .style("border-radius", "50%")
-                  .attr("width", radius-100)
-                  .attr("height", radius-100)
+                  .attr("width", radius - wordMargin)
+                  .attr("height", radius - wordMargin)
                   .style("z-index", 100)
                   .attr("transform", function(d) {
                     // some magic numbers to avoid absolute positioning the center text div
