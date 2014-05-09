@@ -46,24 +46,6 @@ a:hover {
 .dark {
     font-weight: 800;
 }
-#dac_logo {
-    position: fixed;
-    bottom: 3%;
-    left: 1%;
-    z-index: 1000;
-}
-#dac_logo img {
-    width: 100px;
-}
-@media (min-width: 990px) {
-    #dac_logo {
-        bottom: 0;
-        left: 1%;
-    }
-    #dac_logo img {
-        width: 150px;
-    }
-}
 
 /* Main Vizualization */
 #chart {
@@ -135,23 +117,49 @@ a:hover {
     right: 1%;
     top: -0.75em;
     text-align: center;
+    font-size: .8em;
 }
 .questionmk {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 @media (min-width: 990px) {
     #about_link {
+        font-size: 1em;
     }
     .questionmk {
         font-size: 3em;
     }   
 }
-#links {
-    position: fixed;
-    bottom: 0.25%;
-    right: 1%;
-    text-align: center;
+@media (min-width: 990px) {
+    #perspective-sunburst {
+        margin-top: 12%;
+        margin-left: 12%;
+    }
+}
+/* Footer */
+#footer {
     width: 100%;
+}
+#chart_footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+@media (min-width: 990px) {
+    #chart_footer {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: inherit;
+        margin-right: 1em;
+    }
+}
+#links {
+    display: block;
+    text-align: center;
+    height: 100%;
+    font-size: .8em;
+    padding: .5em;
 }
 #links a, #about_link a {
     color: #33a02c;
@@ -161,16 +169,23 @@ a:hover {
 }
 @media (min-width: 990px) {
     #links {
-        position: fixed;
-        bottom: 1%;
         font-size: .9em;
-        text-align: right;
     }
 }
+#dac_logo {
+    display: block;
+    z-index: 1000;
+    text-align: center;
+}
+#dac_logo img {
+    width: 100px;
+}
 @media (min-width: 990px) {
-    #perspective-sunburst {
-        margin-top: 12%;
-        margin-left: 12%;
+    #dac_logo {
+        text-align: right;
+    }
+    #dac_logo img {
+        width: 150px;
     }
 }
 

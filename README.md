@@ -1,6 +1,6 @@
 #Hierarchie
 
-*A STRUCTURED DISPLAY OF TOPICS FROM DISCUSSION SURROUNDING THE MH-370 DISAPPEARANCE*
+*A structured display of topics from discussion surrounding the MH-370 disappearance.*
 
 ![ScreenShot](app/img/full.png)
 
