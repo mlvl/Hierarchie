@@ -42,6 +42,9 @@ a:hover {
     #product_title{
         font-size: 3em;
     }
+    .tagline {
+        font-size: 11px;
+    }
 }
 .dark {
     font-weight: 800;
@@ -148,7 +151,8 @@ a:hover {
 #chart_footer {
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 99%;
+    margin-right: 1em;
 }
 @media (min-width: 990px) {
     #chart_footer {
@@ -156,12 +160,12 @@ a:hover {
         bottom: 0;
         right: 0;
         width: inherit;
-        margin-right: 1em;
+        
     }
 }
 #links {
     display: block;
-    text-align: center;
+    text-align: right;
     height: 100%;
     font-size: .8em;
     padding: .5em;
@@ -180,7 +184,7 @@ a:hover {
 #dac_logo {
     display: block;
     z-index: 1000;
-    text-align: center;
+    text-align: right;
 }
 #dac_logo img {
     width: 100px;
