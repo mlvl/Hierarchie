@@ -45,8 +45,8 @@ define(['angular', 'services'], function(angular, services) {
               // Renders the sunburst with current dataset
               function render(root) {
                 // Dimensions of sunburst.
-                var margin = 120;
-                var width = d3.select("#viz_panel")[0][0].clientWidth;
+                var margin = 140;
+                var width = d3.select("#viz_panel")[0][0].clientWidth - (margin/2);
                 var height = angular.element(window)[0].innerHeight - margin;
                 var radius = Math.min(width, height) / 2;
                 var x = d3.scale.linear()

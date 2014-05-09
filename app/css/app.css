@@ -60,10 +60,14 @@ a:hover {
     position: relative;
 }
 #viz_panel {
-    width: 80%;
+    width: 100%;
     float: left;
-    margin-top: 8%;
-    margin-left: 10%;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+#sunburst {
+    margin-top: -15%;
+    margin-left: 8%;
 }
 @media (min-width: 990px) {
     #viz_panel {
@@ -71,14 +75,14 @@ a:hover {
         width: 44%;
         margin-left: 17%;
     }
+    #sunburst {
+        margin-top: 0;
+    }
 }
 
 /* Perspective Visualization */
 #perspective_panel {
-    width: 100%;
-    position: absolute;
-    top: 1%;
-    left: 1%;
+    display: none;
 }
 #perspective-sunburst-wrapper {
     width: 50%;
@@ -88,6 +92,7 @@ a:hover {
 }
 @media (min-width: 990px) {
     #perspective_panel {
+        display: block;
         float: left;
         width: 38%;
         margin-top: 7%;
