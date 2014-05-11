@@ -62,7 +62,7 @@ define(['angular', 'services'], function(angular, services) {
               function render(root) {
                 // Dimensions of sunburst.
                 var margin = 200;
-                var width = d3.select("#perspective-sunburst-wrapper")[0][0].clientWidth / 2.5;
+                var width = d3.select("#viz_panel")[0][0].clientWidth / 2.5;
                 var height = (angular.element(window)[0].innerHeight - margin) / 2.5;
                 var radius = Math.min(width, height) / 2;
                 var x = d3.scale.linear()

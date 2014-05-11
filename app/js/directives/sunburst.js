@@ -161,7 +161,6 @@ define(['angular', 'services'], function(angular, services) {
                 }
 
                 function center_click() {
-                  console.log
                   var nNode;
                   if (currentRoot && currentRoot.parent) {
                     currentRoot = currentRoot.parent;
@@ -205,7 +204,7 @@ define(['angular', 'services'], function(angular, services) {
                 function showWords(d) {
                   d3.select("#words")
                     .empty();
-                    console.log(wordFormat.formatWords(d.words, 'sunburst'))
+
                   var words = wordFormat.formatWords(d.words, 'sunburst');
 
                   d3.select("#words")
@@ -214,9 +213,6 @@ define(['angular', 'services'], function(angular, services) {
                   d3.select("#words")
                     .style("visibility", "");
 
-                   var ctrWidth = d3.select("#words")[0][0].clientWidth;
-                   var ctrHeight = d3.select("#words")[0][0].clientHeight;
-                   console.log(ctrWidth+" "+ctrHeight);
                 }
 
                 // Fade all but the current sequence, and show it in the breadcrumb trail.
