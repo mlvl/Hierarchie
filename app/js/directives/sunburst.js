@@ -137,7 +137,7 @@ angular.module('hierarchie.directives')
               .append("xhtml:div")
               .attr("id", "words")
               .style("text-align", "center")
-              .on("click", sunburst_click);
+              .on("click", center_click);
 
             // Show the list of words for the currently focused node
             showWords(currentRoot);
@@ -145,23 +145,16 @@ angular.module('hierarchie.directives')
             // Add the mouseleave handler to the bounding circle.
             d3.select("#container").on("mouseleave", mouseleave);
 
+
             function sunburst_click(d) {
               var nNode;
-              if (d) {
-                if (d === currentRoot && d.parent) {
-                  currentRoot = d.parent;
-                  nNode = currentRoot;
-                } else {
-                  currentRoot = d;
-                  nNode = d;
-                }
+              if (d === currentRoot && d.parent) {
+                currentRoot = d.parent;
+                nNode = currentRoot;
               } else {
-                if (currentRoot && currentRoot.parent) {
-                  currentRoot = currentRoot.parent;
-                  nNode = currentRoot;
-                }
+                currentRoot = d;
+                nNode = d;
               }
-
               showWords(nNode);
               var ancestors = nodeService.getAncestors(nNode);
               $rootScope.$broadcast('updateBreadcrumb', nNode, ancestors);
@@ -176,6 +169,28 @@ angular.module('hierarchie.directives')
                 .attrTween("d", arcTween(nNode));
 
             }
+
+            function center_click() {
+              var nNode;
+              if (currentRoot && currentRoot.parent) {
+                currentRoot = currentRoot.parent;
+                nNode = currentRoot;
+              }
+              showWords(nNode);
+
+              var ancestors = nodeService.getAncestors(nNode);
+              $rootScope.$broadcast('updateBreadcrumb', nNode, ancestors);
+
+              d3.selectAll("#sunburst-path")
+                .style("opacity", function(d) {
+                  return ancestors.indexOf(d) !== -1 || d === currentRoot ? 0.15 : 1;
+                });
+
+              path.transition()
+                .duration(500)
+                .attrTween("d", arcTween(nNode));
+            }
+
 
             // Interpolate the scales!
             function arcTween(d) {
