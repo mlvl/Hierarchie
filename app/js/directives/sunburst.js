@@ -25,6 +25,7 @@ define(['angular', 'services'], function(angular, services) {
           },
           link: function(scope) {
             d3Service.getD3(function(d3) {
+              var currentRoot;
 
               // Watch for changes in data
               scope.$watch('data', function(newVals) {
@@ -42,6 +43,16 @@ define(['angular', 'services'], function(angular, services) {
                 render(scope.data);
               });
 
+              // Watch for resize event & re render
+              scope.$watch(function() {
+                return d3.select("#viz_panel")[0][0].clientWidth;
+              }, function(ev) {
+                if(scope.data && currentRoot) {
+                  d3.select('.sunburst-svg').remove();
+                  render(currentRoot);
+                }
+              });
+
               // Renders the sunburst with current dataset
               function render(root) {
                 // Dimensions of sunburst.
@@ -57,7 +68,8 @@ define(['angular', 'services'], function(angular, services) {
                   .range([0, 2 * Math.PI]);
                 var y = d3.scale.sqrt()
                   .range([0, radius]);
-                var currentRoot = root;
+
+                currentRoot = root;
 
                 var vis = d3.select("#sunburst").append("svg:svg")
                   .attr("class", "sunburst-svg")
@@ -85,6 +97,7 @@ define(['angular', 'services'], function(angular, services) {
                   .outerRadius(function(d) {
                     return Math.max(0, y(d.y + d.dy));
                   });
+
                 // Bounding circle underneath the sunburst, to make it easier to detect
                 // when the mouse leaves the parent g.
                 vis.append("svg:circle")
@@ -127,24 +140,31 @@ define(['angular', 'services'], function(angular, services) {
                   .append("xhtml:div")
                   .attr("id", "words")
                   .style("text-align", "center")
-                  .on("click", center_click);
+                  .on("click", sunburst_click);
 
                 // Show the list of words for the currently focused node
-                showWords(root);
+                showWords(currentRoot);
 
                 // Add the mouseleave handler to the bounding circle.
                 d3.select("#container").on("mouseleave", mouseleave);
 
                 function sunburst_click(d) {
                   var nNode;
-                  if (d === currentRoot && d.parent) {
-                    currentRoot = d.parent;
-                    nNode = currentRoot;
+                  if (d) {
+                    if (d === currentRoot && d.parent) {
+                      currentRoot = d.parent;
+                      nNode = currentRoot;
+                    } else {
+                      currentRoot = d;
+                      nNode = d;
+                    }
+                  } else {
+                    if (currentRoot && currentRoot.parent) {
+                      currentRoot = currentRoot.parent;
+                      nNode = currentRoot;
+                    }
                   }
-                  else {
-                    currentRoot = d;
-                    nNode = d;
-                  }
+
                   showWords(nNode);
                   var ancestors = nodeService.getAncestors(nNode);
                   $rootScope.$broadcast('updateBreadcrumb', nNode, ancestors);
@@ -158,27 +178,6 @@ define(['angular', 'services'], function(angular, services) {
                     .duration(500)
                     .attrTween("d", arcTween(nNode));
 
-                }
-
-                function center_click() {
-                  var nNode;
-                  if (currentRoot && currentRoot.parent) {
-                    currentRoot = currentRoot.parent;
-                    nNode = currentRoot;
-                  }
-                  showWords(nNode);
-
-                  var ancestors = nodeService.getAncestors(nNode);
-                  $rootScope.$broadcast('updateBreadcrumb', nNode, ancestors);
-
-                  d3.selectAll("#sunburst-path")
-                    .style("opacity", function(d) {
-                      return ancestors.indexOf(d) !== -1 || d === currentRoot ? 0.15 : 1;
-                    });
-
-                  path.transition()
-                    .duration(500)
-                    .attrTween("d", arcTween(nNode));
                 }
 
                 // Interpolate the scales!

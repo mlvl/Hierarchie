@@ -40,6 +40,16 @@ define(['angular', 'services'], function(angular, services) {
                 render(scope.data);
               });
 
+              // Watch for resize event & re render
+              scope.$watch(function() {
+                return d3.select("#viz_panel")[0][0].clientWidth;
+              }, function(ev) {
+                if(scope.data) {
+                  d3.select('.perspective-sunburst-svg').remove();
+                  render(scope.data);
+                }
+              });
+
               scope.$on('updatePerspective', function(ev, ancestors, children) {
                 drawPerspective(ancestors, children);
               });

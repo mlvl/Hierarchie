@@ -27,29 +27,7 @@ define(['angular', 'services'], function(angular, services) {
           link: function(scope) {
             d3Service.getD3(function(d3) {
 
-              var width = d3.select("#viz_panel")[0][0].clientWidth;
-              var mobileDisplay = d3.select("body")[0][0].clientWidth < 990;
-              // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
-              var b = {
-                w: 100,
-                h: 40,
-                s: 3,
-                t: 10
-              };
-              if (mobileDisplay) {
-                b = {
-                  w: 60,
-                  h: 30,
-                  s: 3,
-                  t: 10
-                };
-              }
-
-              // Add the svg area.
-              d3.select("#sequence").append("svg:svg")
-                .attr("width", width)
-                .attr("height", b.h)
-                .attr("id", "trail");
+              var b, mobileDisplay;
 
               scope.$on('updateBreadcrumb', function(ev, node, sequenceArray) {
                 updateBreadcrumbs(sequenceArray, node.words[0]);
@@ -59,6 +37,41 @@ define(['angular', 'services'], function(angular, services) {
                 d3.select("#trail")
                   .style("visibility", "hidden");
               });
+
+              scope.$watch(function() {
+                return d3.select("#viz_panel")[0][0].clientWidth;
+              }, function(ev) {
+                  d3.select('#trail').remove();
+                  setup();
+              });
+
+              function setup() {
+                var width = d3.select("#viz_panel")[0][0].clientWidth;
+                mobileDisplay = d3.select("body")[0][0].clientWidth < 990;
+                // Breadcrumb dimensions: width, height, spacing, width of tip/tail.
+                b = {
+                  w: 100,
+                  h: 40,
+                  s: 3,
+                  t: 10
+                };
+                if (mobileDisplay) {
+                  b = {
+                    w: 60,
+                    h: 30,
+                    s: 3,
+                    t: 10
+                  };
+                }
+
+              // Add the svg area.
+              d3.select("#sequence").append("svg:svg")
+                .attr("width", width)
+                .attr("height", b.h)
+                .attr("id", "trail");
+              }
+
+              setup();
 
               // Generate a string that describes the points of a breadcrumb polygon.
               function breadcrumbPoints(d, i) {

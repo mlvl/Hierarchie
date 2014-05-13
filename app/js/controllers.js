@@ -11,6 +11,10 @@ define(['angular', 'services'], function (angular) {
         $scope.displayVis = false;
         $scope.currentnode;
         $scope.color;
+        // Browser onresize event
+        window.onresize = function() {
+          $scope.$apply();
+        };
         // Changes between the sunburst and partition views
         $scope.display = function(vis) {
           if(vis === "part") {

@@ -54,16 +54,14 @@ a:hover {
 #viz_panel {
     width: 100%;
     float: left;
-    margin-top: 2%;
     margin-left: 1%;
 }
 #sunburst {
-    margin-top: -10%;
+    margin-top: -4%;
     margin-left: 8%;
 }
 @media (min-width: 990px) {
     #viz_panel {
-        margin-top: 0;
         width: 44%;
         margin-left: 17%;
     }
