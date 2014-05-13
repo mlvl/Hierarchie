@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="hierarchie">
 
     <head>
         <title>Hierarchie</title>
@@ -13,8 +13,19 @@
     
     <div ng-view></div>
 
-    <script data-main="app/js/main" src="bower_components/requirejs/require.js"></script>		
-    
+      <script src="bower_components/d3/d3.min.js"></script>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-route/angular-route.js"></script>
+      <script src="bower_components/underscore/underscore.js"></script>
+      <script src="app/js/app.js"></script>
+      <script src="app/js/routes.js"></script>
+      <script src="app/js/services.js"></script>
+      <script src="app/js/controllers.js"></script>
+      <script src="app/js/filters.js"></script>
+      <script src="app/js/directives.js"></script>		
+      <script src="app/js/directives/breadcrumb.js"></script>
+      <script src="app/js/directives/sunburst-perspective.js"></script>
+      <script src="app/js/directives/sunburst.js"></script>  
     </body>
 
     <script>
