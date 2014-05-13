@@ -1,12 +1,13 @@
 {
-  "name": "hierarchie",
+  "name": "HIERARCHIE",
+  "version": "0.0.1",
+  "description": "A hierarchical display of topic distributions",
+  "private": true,
+  "author": "Decisive Analytics Corporation [dac.us]",
   "dependencies": {
     "angular": "1.2.x",
     "angular-route": "1.2.x",
     "d3":"latest",
-    "underscore":"latest",
-    "requirejs":"latest",
-    "requirejs-text":"latest",
-    "requirejs-domready":"latest"
+    "underscore":"latest"
   }
 }
