@@ -18,10 +18,13 @@ You can view the visualization live [here](http://decisive-ui.github.io/Hierarch
 
 Hierarchie updates on mouseover and zooms on click, so it's best viewed on a laptop or desktop. 
 
+### Known Issues & Suggested Improvements
+- Exposing the documents underlying topics
+- Search capabilities
+- Improving responsiveness of website and visualizations
+- Better cross-browser support (Center text appends using foreignObject will not work in IE)
+- Needs tests!
+
 ### License
 
 Hierarchie is covered by the Apache Version 2.0 License. Please see LICENSE.txt for more details.
-
-### Known Issues & Suggested Improvements
-- Needs tests!
-- Center text appends using foreignObject will not work in IE
