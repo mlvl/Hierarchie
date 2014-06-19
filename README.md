@@ -1,3 +1,5 @@
+![Logo](mlvl-logo-color-500.png)
+
 #Hierarchie
 
 *A structured display of topics from discussion surrounding the MH-370 disappearance.*
