@@ -89,6 +89,16 @@ a:hover {
   fill: #222;
 }
 
+/* MLVL Logo */
+#mlvl_logo {
+    position: absolute;
+    left: 1%;
+
+}
+.logo-img {
+    width: 60px;
+}
+
 /* About links */
 #about_link {
     position: absolute;
@@ -101,6 +111,9 @@ a:hover {
     font-size: 1.5em;
 }
 @media (min-width: 990px) {
+    .logo-img {
+        width: 100px;
+    }
     #about_link {
         font-size: 1em;
     }
@@ -157,14 +170,15 @@ a:hover {
     text-align: right;
 }
 #dac_logo img {
-    width: 100px;
+    height: 60px;
 }
+
 @media (min-width: 990px) {
     #dac_logo {
         text-align: right;
     }
     #dac_logo img {
-        width: 150px;
+        height: 60px;
     }
 }
 
